@@ -9,11 +9,6 @@ The `go-uni` prototype is a script designed to monitor newly created tokens on t
 - **Graceful Shutdown**: Incorporates graceful shutdown handling to ensure clean termination upon receiving termination signals like SIGINT or SIGTERM.
 - **Error Handling**: Includes error handling mechanisms for robustness during Ethereum client connection, contract instantiation, event filtering, and processing.
 
-## Dependencies
-- **Ethereum Client**: Utilizes `github.com/ethereum/go-ethereum/ethclient` to connect to an Ethereum node.
-- **WebSocket Client**: Uses `github.com/ethereum/go-ethereum/ethclient` for WebSocket connectivity to fetch new block headers.
-- **Uniswapv2 Contract ABI**: Requires the ABI (Application Binary Interface) of the Uniswapv2 contract for interaction, imported from `github.com/S-Amine/go-uni/contracts/uniswapv2`.
-
 ## Installation
 - Clone the repository containing the script.
 - Ensure that Go is installed on your system.
