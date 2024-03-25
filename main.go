@@ -18,8 +18,8 @@ import (
 
 const (
 	defaultSleepDuration = 5 * time.Second
-	maxSleepDuration     = 5 * time.Second
-	lastBlocksToCheck    = 0
+	maxSleepDuration     = 15 * time.Second
+	lastBlocksToCheck    = 1
 )
 
 func main() {
@@ -79,7 +79,7 @@ func processNewBlock(instance *uniswapv2.Uniswapv2, header *types.Header) {
 	// Fetch PairCreated events
 	pairCreatedEvents, err := instance.FilterPairCreated(filterOpts, nil, nil)
 	if err != nil {
-		log.Printf("Error fetching PairCreated events: %v\n", err)
+		log.Printf("Error fetching PairCreated events: %++v\n", err)
 		return
 	}
 	defer pairCreatedEvents.Close()
